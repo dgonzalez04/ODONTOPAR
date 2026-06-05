@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Gamers\\\\Desktop\\\\Dimas\\\\ODONTOPAR\" -Recurse -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(ConvertTo-Json)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Gamers\\\\Desktop\\\\Dimas\\\\ODONTOPAR\")",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(ls -la \"C:\\\\Users\\\\Gamers\\\\Desktop\\\\Dimas\" 2>&1)",
+      "Bash(find \"C:\\\\Users\\\\Gamers\\\\Desktop\\\\Dimas\" -maxdepth 2 -type f 2>&1)"
+    ]
+  }
+}

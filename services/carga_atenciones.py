@@ -1,6 +1,7 @@
 import pandas as pd
 from datetime import date
 from db.connection import get_connection
+import psycopg2.extras
 
 
 def cargar_excel(uploaded_file) -> dict:
@@ -31,7 +32,7 @@ def cargar_excel(uploaded_file) -> dict:
     conn = get_connection()
     try:
         with conn:
-            with conn.cursor() as cur:
+            with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
                 for idx, row in df.iterrows():
                     cod_pac   = str(row[col_map["cod_paciente"]]).strip()
                     nom_pac   = str(row[col_map["nom_paciente"]]).strip()
